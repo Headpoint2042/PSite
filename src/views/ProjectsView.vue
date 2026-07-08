@@ -11,7 +11,7 @@ const projects: Project[] = [
     name: 'Agent Smith (peon-ping pack)',
     description:
       'A custom voice/sound pack for peon-ping, giving Claude Code an Agent Smith-themed audio cue for session start, task completion, input requests, and more.',
-    link: 'https://github.com/Headpoint2042/PSite/tree/main/packs/agent-smith',
+    link: 'https://github.com/Headpoint2042/PSite/tree/main/public/sounds/agent-smith',
     tags: ['Audio', 'Tooling'],
   },
   {

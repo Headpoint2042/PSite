@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import SoundBoard from '../components/SoundBoard.vue'
 </script>
 
 <template>
@@ -21,5 +22,7 @@
       has me building my own personal cloud from the ground up, tools and
       all. Outside of code, you'll find me with music on or out on a walk.
     </p>
+
+    <SoundBoard />
   </section>
 </template>
