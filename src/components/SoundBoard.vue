@@ -19,7 +19,7 @@ const playing = ref<string | null>(null)
 
 function play(file: string) {
   if (!audio.value) return
-  audio.value.src = `/sounds/agent-smith/${file}`
+  audio.value.src = `/sounds/agent-smith/sounds/${file}`
   playing.value = file
   audio.value.play()
 }
