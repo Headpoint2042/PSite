@@ -4,6 +4,8 @@ interface Entry {
   org: string
   date: string
   description?: string
+  programLink?: string
+  mapLink?: string
 }
 
 const education: Entry[] = [
@@ -12,6 +14,9 @@ const education: Entry[] = [
     org: 'TU Delft, Delft, Netherlands',
     date: 'Sep 2025 - Present',
     description: 'Fields of study: Cyber Security, Software Engineering.',
+    programLink: 'https://www.tudelft.nl/onderwijs/opleidingen/masters/cs/msc-computer-science',
+    mapLink:
+      'https://www.google.com/maps/place//data=!4m2!3m1!1s0x47c5b58e7e597879:0x3d1e05e58c2c037c?sa=X&ved=1t:8290&ictx=111',
   },
   {
     title: 'BSc Technical Computer Science',
@@ -19,11 +24,17 @@ const education: Entry[] = [
     date: 'Sep 2022 - Jul 2025',
     description:
       'Fields of study: Software Systems, Network Systems, Data & Information, Computer Systems, Cyber Security.',
+    programLink: 'https://www.utwente.nl/onderwijs/bachelor/opleidingen/technical-computer-science/',
+    mapLink:
+      'https://www.google.com/maps/place//data=!4m2!3m1!1s0x47b813d992e2ab01:0x790b33d6b663608f?sa=X&ved=1t:8290&ictx=111',
   },
   {
     title: 'Graduation Diploma',
     org: 'IP Theoretical Lyceum "Ion Creangă", Chișinău, Moldova',
     date: 'Aug 2010 - Jun 2022',
+    programLink: 'https://creanga.md/',
+    mapLink:
+      'https://www.google.com/maps/place//data=!4m2!3m1!1s0x40c97ce10cf28533:0x55219c5e41a017ac?sa=X&ved=1t:8290&ictx=111',
   },
 ]
 
@@ -56,6 +67,26 @@ const education: Entry[] = [
           <p v-if="item.description" class="mt-2 text-slate-400">
             {{ item.description }}
           </p>
+          <div v-if="item.programLink || item.mapLink" class="mt-3 flex gap-4 font-mono text-xs">
+            <a
+              v-if="item.programLink"
+              :href="item.programLink"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-cyan hover:glow-cyan"
+            >
+              program &rarr;
+            </a>
+            <a
+              v-if="item.mapLink"
+              :href="item.mapLink"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-violet hover:text-cyan"
+            >
+              map &rarr;
+            </a>
+          </div>
         </li>
       </ul>
     </div>

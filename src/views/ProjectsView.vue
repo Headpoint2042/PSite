@@ -30,9 +30,10 @@ const projects: Project[] = [
   },
   {
     name: 'lisa-library',
-    description: 'Private repository.',
+    description:
+      'Real-world project built for the University of Twente library: ingests sensor data, runs analysis and calculations, and presents it through role-based dashboards (admin/student) with data visualizations and graphs.',
     // link intentionally omitted: repository is private
-    tags: ['Private'],
+    tags: ['Private', 'Vue', 'Python', 'Data Visualization'],
   },
   {
     name: 'Rythmly',
@@ -50,9 +51,10 @@ const projects: Project[] = [
   },
   {
     name: 'CarboCore',
-    description: 'An attempt at building a simple game engine from scratch.',
+    description:
+      '2D-focused game engine built in C++ with OpenGL, structured as a shared library with a Hazel-style architecture and a Sandbox app for testing.',
     link: 'https://github.com/Headpoint2042/CarboCore',
-    tags: ['C++'],
+    tags: ['C++', 'OpenGL'],
   },
   {
     name: 'ToDoApp',
@@ -63,7 +65,8 @@ const projects: Project[] = [
   },
   {
     name: 'PrologSudoku',
-    description: 'A Sudoku logic puzzle solver written in Prolog.',
+    description:
+      'Sudoku solver in SWI-Prolog with three approaches: brute-force candidate generation, constraint propagation via naked/hidden singles, and a clpfd-based version that is dramatically faster.',
     link: 'https://github.com/Headpoint2042/PrologSudoku',
     tags: ['Prolog'],
   },
