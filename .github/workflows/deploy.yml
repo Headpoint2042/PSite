@@ -1,10 +1,5 @@
 name: Build and push image
 
-# Option C: CI only builds and pushes the arm64 image to GHCR.
-# You then deploy from your PC (already on Tailscale) with:
-#   kubectl -n projects rollout restart deployment/psite
-# No cluster credentials are stored in GitHub.
-
 on:
   push:
     branches: [main]
@@ -15,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read
-      packages: write        # push to GHCR under this repo's owner
+      packages: write
     steps:
       - name: Checkout
         uses: actions/checkout@v4
