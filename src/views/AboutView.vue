@@ -23,6 +23,33 @@ import SoundBoard from '../components/SoundBoard.vue'
       all. Outside of code, you'll find me with music on or out on a walk.
     </p>
 
+    <div class="mt-6 flex gap-5 font-mono text-sm">
+      <a
+        href="https://github.com/Headpoint2042"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="text-cyan hover:glow-cyan"
+      >
+        GitHub &rarr;
+      </a>
+      <a
+        href="https://www.linkedin.com/in/erhan-dragos-a634b6274"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="text-violet hover:text-cyan"
+      >
+        LinkedIn &rarr;
+      </a>
+      <a
+        href="https://leetcode.com/u/Headpoint2042/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="text-cyan hover:glow-cyan"
+      >
+        LeetCode &rarr;
+      </a>
+    </div>
+
     <SoundBoard />
   </section>
 </template>

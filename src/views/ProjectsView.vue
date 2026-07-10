@@ -83,6 +83,20 @@ const projects: Project[] = [
     link: 'https://github.com/Headpoint2042/PCloud',
     tags: ['DevOps'],
   },
+  {
+    name: 'DodgeIT',
+    description:
+      '2D platformer built in GameMaker Studio where you dodge spikes and ghost fire, surviving as long as possible while difficulty escalates over time.',
+    link: 'https://github.com/Headpoint2042/DodgeIT',
+    tags: ['GameMaker', 'Game Dev'],
+  },
+  {
+    name: 'Tikkie',
+    description:
+      'Personal learning project recreating the core functionality of the Tikkie app, letting users split bills and request money from friends within organized groups.',
+    link: 'https://github.com/Headpoint2042/Tikkie',
+    tags: ['Laravel', 'PHP', 'Vue'],
+  },
 ]
 </script>
 
