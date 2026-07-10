@@ -19,19 +19,26 @@ const playing = ref<string | null>(null)
 
 function play(file: string) {
   if (!audio.value) return
-  audio.value.src = `/sounds/agent-smith/sounds/${file}`
+  audio.value.src = `${import.meta.env.BASE_URL}sounds/agent-smith/sounds/${file}`
   playing.value = file
-  audio.value.play()
+  audio.value.play().catch(() => {
+    // Interrupted by another click or failed to load; only clear if no newer sound took over.
+    if (playing.value === file) playing.value = null
+  })
 }
 
-function onEnded() {
+function onStopped() {
   playing.value = null
 }
 </script>
 
 <template>
-  <div class="mt-10">
+  <div class="mt-16 border-t border-cyan/20 pt-8">
     <p class="font-mono text-sm text-magenta">// agent_smith.pack</p>
+    <p class="mt-2 text-sm text-slate-400">
+      An Agent Smith sound pack I built for peon-ping. Click one (audio, mind
+  your volume).
+    </p>
     <div class="mt-3 flex flex-wrap gap-2">
       <button
         v-for="sound in sounds"
@@ -44,6 +51,6 @@ function onEnded() {
         {{ sound.label }}
       </button>
     </div>
-    <audio ref="audio" @ended="onEnded" />
+    <audio ref="audio" @ended="onStopped" @error="onStopped" />
   </div>
 </template>

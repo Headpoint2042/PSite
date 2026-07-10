@@ -8,6 +8,13 @@ interface Project {
 
 const projects: Project[] = [
   {
+    name: 'PCloud',
+    description:
+      'Personal k3s Kubernetes cluster, managed with declarative manifests, that hosts this very site. Private admin access runs over Tailscale VPN, public apps are exposed through a Cloudflare Tunnel, with zero open router ports.',
+    link: 'https://github.com/Headpoint2042/PCloud',
+    tags: ['DevOps', 'Kubernetes', 'Networking'],
+  },
+  {
     name: 'Agent Smith (peon-ping pack)',
     description:
       'A custom voice/sound pack for peon-ping, giving Claude Code an Agent Smith-themed audio cue for session start, task completion, input requests, and more.',
@@ -76,12 +83,6 @@ const projects: Project[] = [
       'DevOps practice exercises covering Docker, virtual machine provisioning with Vagrant and Ansible, and Kubernetes deployment patterns.',
     link: 'https://github.com/Headpoint2042/DODA-practice',
     tags: ['DevOps', 'Docker', 'Kubernetes'],
-  },
-  {
-    name: 'PCloud',
-    description: 'Personal cloud/DevOps project, currently in early stages.',
-    link: 'https://github.com/Headpoint2042/PCloud',
-    tags: ['DevOps'],
   },
   {
     name: 'DodgeIT',
