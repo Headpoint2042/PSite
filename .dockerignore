@@ -6,6 +6,7 @@ dist
 dist-ssr
 *.local
 *.log
+*.bat
 .DS_Store
 Dockerfile
 .dockerignore
