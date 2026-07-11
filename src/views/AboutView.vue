@@ -25,7 +25,7 @@ import SoundBoard from '../components/SoundBoard.vue'
         GitHub &rarr;
       </a>
       <a
-        href="https://www.linkedin.com/in/erhan-dragos-a634b6274"
+        href="https://www.linkedin.com/in/dragos-erhan/"
         target="_blank"
         rel="noopener noreferrer"
         class="text-cyan hover:glow-cyan"
