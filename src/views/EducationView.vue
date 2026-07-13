@@ -6,6 +6,7 @@ interface Entry {
   description?: string
   programLink?: string
   mapLink?: string
+  certificateLink?: string
 }
 
 const education: Entry[] = [
@@ -38,8 +39,16 @@ const education: Entry[] = [
   },
 ]
 
-// TODO: certificates section - not yet populated, wire up when available.
-// const certificates: Entry[] = []
+const certificates: Entry[] = [
+  {
+    title: 'Pre Security Learning Path',
+    org: 'TryHackMe',
+    date: 'Jul 2026',
+    description:
+      'Fundamentals of cyber security: networking, web basics, Linux and Windows.',
+    certificateLink: '/certificates/THM_PreSec.pdf',
+  },
+]
 </script>
 
 <template>
@@ -91,23 +100,33 @@ const education: Entry[] = [
       </ul>
     </div>
 
-    <!--
-      TODO: certificates section, uncomment and populate `certificates` above once available.
-      <div class="mt-12">
-        <h2 class="font-mono text-lg text-cyan">certificates</h2>
-        <ul class="mt-4 space-y-6">
-          <li
-            v-for="item in certificates"
-            :key="item.title"
-            class="neon-border rounded-lg bg-panel/60 p-5"
-          >
-            <p class="glitch-target font-medium text-slate-100">{{ item.title }}</p>
-            <p class="font-mono text-xs text-slate-500">
-              {{ item.org }} &middot; {{ item.date }}
-            </p>
-          </li>
-        </ul>
-      </div>
-    -->
+    <div class="mt-12">
+      <h2 class="font-mono text-lg text-cyan">certificates</h2>
+      <ul class="mt-4 space-y-6">
+        <li
+          v-for="item in certificates"
+          :key="item.title"
+          class="neon-border rounded-lg bg-panel/60 p-5"
+        >
+          <p class="glitch-target font-medium text-slate-100">{{ item.title }}</p>
+          <p class="font-mono text-xs text-slate-500">
+            {{ item.org }} &middot; {{ item.date }}
+          </p>
+          <p v-if="item.description" class="mt-2 text-slate-400">
+            {{ item.description }}
+          </p>
+          <div v-if="item.certificateLink" class="mt-3 flex gap-4 font-mono text-xs">
+            <a
+              :href="item.certificateLink"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-cyan hover:glow-cyan"
+            >
+              certificate &rarr;
+            </a>
+          </div>
+        </li>
+      </ul>
+    </div>
   </section>
 </template>
