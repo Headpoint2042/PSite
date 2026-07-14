@@ -46,7 +46,7 @@ const certificates: Entry[] = [
     date: 'Jul 2026',
     description:
       'Fundamentals of cyber security: networking, web basics, Linux and Windows.',
-    certificateLink: '/certificates/THM_PreSec.pdf',
+    certificateLink: 'https://tryhackme.com/certificate/THM-XJF8C0WZTX',
   },
 ]
 </script>
